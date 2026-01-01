@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Олічка - Telegram Style</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            /* Колір фону як у нічній темі Telegram */
+            background-color: #0f1721; 
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            /* Колір "хмаринки" повідомлення в Telegram */
+            background: #1c2733;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+        }
+
+        /* Імітація "хвостика" повідомлення Telegram */
+        .container::after {
+            content: "";
+            position: absolute;
+            bottom: 20px;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            background: #1c2733;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            display: none; /* Можна увімкнути, якщо хочеться ефекту чату */
+        }
+
+        .main-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%; /* Кругла аватарка */
+            border: 3px solid #50a2e9; /* Фірмовий блакитний Telegram */
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin: 10px 0 5px;
+        }
+
+        .status {
+            color: #50a2e9; /* Колір "online" */
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            background: #24303f; /* Трохи світліший фон для тексту */
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .english-words {
+            background: rgba(80, 162, 233, 0.1); /* Прозорий блакитний */
+            padding: 15px;
+            border-radius: 15px;
+            text-align: left;
+            border-left: 3px solid #50a2e9;
+        }
+
+        .english-words strong {
+            color: #50a2e9;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+            background: #50a2e9;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-radius: 15px; /* Більш квадратні кнопки, як у Telegram */
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #4391d4;
+            transform: translateY(-2px);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="olia.jpg..jpg" alt="Олічка" class="main-photo">
+
+        <h1>Олічка</h1>
+        <div class="status">online</div>
+        
+        <div class="description">
+            Це найкраща сестра у світі! Вона дуже гарна, добра та щира. ✨
+        </div>
+
+        <div class="english-words">
+            <strong>Today's English Lessons:</strong>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95em;">
+                <li>💎 <b>Gorgeous</b> [ˈɡɔːrdʒəs]</li>
+                <li>🫂 <b>Beloved sister</b></li>
+                <li>⚡ <b>Bright personality</b></li>
+            </ul>
+        </div>
+
+        <a href="https://t.me/ttsv00" target="_blank" class="btn">
+            Send Message in Telegram
+        </a>
+    </div>
+
+</body>
+</html>

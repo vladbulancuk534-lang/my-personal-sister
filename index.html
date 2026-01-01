@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Олічка | Психологія Життя</title>
+    <style>
+        /* Головні налаштування кольорів */
+        :root {
+            --insta-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            --bg-dark: #0f1721;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-white: #ffffff;
+            --accent-pink: #ff4081;
+        }
+
+        body {
+            background: radial-gradient(circle at top right, #2d1b4d, #000000);
+            color: var(--text-white);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Шапка з аватаркою */
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            padding: 4px;
+            background: var(--insta-gradient);
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(220, 39, 67, 0.4);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin: 15px 0 5px;
+            background: var(--insta-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: 0.9em;
+            color: #a8a8a8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Контейнер для кнопок-переходів */
+        .links-container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Стиль кнопок (Glassmorphism) */
+        .nav-link {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 18px 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.03);
+            border-color: var(--accent-pink);
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.2);
+        }
+
+        .nav-link span.emoji {
+            font-size: 1.4em;
+            margin-right: 15px;
+        }
+
+        .nav-link .arrow {
+            opacity: 0.5;
+            font-size: 1.2em;
+        }
+
+        /* Футер */
+        footer {
+            margin-top: auto;
+            padding: 40px 20px;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <img src="olia.jpg..jpg" alt="Олічка" class="profile-img">
+        <h1>Олічка</h1>
+        <div class="subtitle">Psychology & Life</div>
+    </div>
+
+    <div class="links-container">
+        
+        <a href="sister.html" class="nav-link">
+            <div><span class="emoji">💖</span> Моя історія</div>
+            <span class="arrow">➜</span>
+        </a>
+
+        <a href="instagram.html" class="nav-link">
+            <div><span class="emoji">📸</span> Instagram</div>
+            <span class="arrow">➜</span>
+        </a>
+
+        <a href="telegram.html" class="nav-link">
+            <div><span class="emoji">✈️</span> Telegram</div>
+            <span class="arrow">➜</span>
+        </a>
+
+        <a href="about.html" class="nav-link">
+            <div><span class="emoji">ℹ️</span> Про проєкт</div>
+            <span class="arrow">➜</span>
+        </a>
+
+        <a href="thank_you.html" class="nav-link">
+            <div><span class="emoji">✨</span> Дякуємо</div>
+            <span class="arrow">➜</span>
+        </a>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Створено з любов'ю для Олічки
+    </footer>
+
+</body>
+</html>

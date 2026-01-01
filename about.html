@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПСИХОЛОГІЯ ЖИТТЯ | Головна</title>
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --text-color: #1c1e21;
+            --card-bg: #ffffff;
+            --accent-color: #ff4081;
+            --btn-hover: #fce4ec;
+        }
+
+        .dark-theme {
+            --bg-color: #18191a;
+            --text-color: #e4e6eb;
+            --card-bg: #242526;
+            --accent-color: #ff80ab;
+            --btn-hover: #3a3b3c;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .theme-toggle {
+            margin: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background: var(--accent-color);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        h1 { 
+            margin-bottom: 30px; 
+            text-align: center;
+        }
+
+        /* Контейнер для кнопок-переходів */
+        .navigation-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        /* Стиль кнопки-картки */
+        .nav-card {
+            background: var(--card-bg);
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-card:hover {
+            transform: translateX(10px);
+            background: var(--btn-hover);
+            border-color: var(--accent-color);
+        }
+
+        .nav-card h3 {
+            margin: 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .arrow {
+            font-size: 1.2em;
+            color: var(--accent-color);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleTheme()" class="theme-toggle" id="themeBtn">☀️ Світла тема</button>
+
+    <h1>Психологія Життя</h1>
+
+    <div class="navigation-grid">
+        
+        <a href="sister.html" class="nav-card">
+            <h3><span>👩‍❤️‍👨</span> Сестра Олічка</h3>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="instagram.html" class="nav-card">
+            <h3><span>📸</span> Мій Instagram</h3>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="telegram.html" class="nav-card">
+            <h3><span>✈️</span> Мій Telegram</h3>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="about.html" class="nav-card">
+            <h3><span>ℹ️</span> Про нас</h3>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="contact.html" class="nav-card">
+            <h3><span>📞</span> Контакти</h3>
+            <span class="arrow">→</span>
+        </a>
+
+        <a href="thank_you.html" class="nav-card">
+            <h3><span>🙏</span> Дякуємо</h3>
+            <span class="arrow">→</span>
+        </a>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Psychology Life Project
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+            const btn = document.getElementById("themeBtn");
+            if (document.body.classList.contains("dark-theme")) {
+                btn.innerHTML = "🌙 Темна тема";
+            } else {
+                btn.innerHTML = "☀️ Світла тема";
+            }
+        }
+    </script>
+</body>
+</html>
